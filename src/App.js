@@ -1,6 +1,7 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Link } from '@nextui-org/react';
 import './App.css';
 import { useEffect, useState } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [future, setFuture] = useState(Date.parse("June 27, 2024 12:00:00"))
@@ -61,6 +62,7 @@ function App() {
       <CardFooter className='mt-5 py-6'>
         {reward === 1 ? <Button as={Link} href='https://drive.google.com/file/d/1t_MWkUi2kLVBcpOBYgQ_1dOjIhMTJH0R/view?usp=drive_link' download={true} radius='md' className='mx-auto border-double border-4 border-lime-950 py-6 bg-transparent animate-bounce'>Odbierz nagrodę</Button> : <Button isDisabled radius='md' className='mx-auto border-double border-4 border-lime-950 py-6 bg-transparent'>Odbierz nagrodę</Button>}
       </CardFooter>
+      <Analytics/>
     </Card>
   );
 }
