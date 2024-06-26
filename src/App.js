@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
-  const [future, setFuture] = useState(Date.parse("June 27, 2024 17:00:00"))
+  const [future, setFuture] = useState(Date.parse("June 27, 2024 15:30:00"))
   const [now, setNow] = useState(new Date())
   const [diff, setDiff] = useState(future - now)
   const [d, setD] = useState(Math.floor( diff / (1000*60*60*24) ))
@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFuture(Date.parse("June 27, 2024 17:00:00"))
+      setFuture(Date.parse("June 27, 2024 15:30:00"))
       setNow(new Date())
       setDiff(future - now)
       setD(Math.floor( diff / (1000*60*60*24) ))
