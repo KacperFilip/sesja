@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFuture(Date.parse("June 27, 2024 12:00:00"))
+      setFuture(Date.parse("June 27, 2024 17:00:00"))
       setNow(new Date())
       setDiff(future - now)
       setD(Math.floor( diff / (1000*60*60*24) ))
